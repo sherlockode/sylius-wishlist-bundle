@@ -1,0 +1,23 @@
+{
+    "name": "sherlockode/sylius-wishlist-bundle",
+    "description": "Wishlist bundle for Sylius e-commerce platform.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "keywords": [
+        "symfony",
+        "sylius",
+        "wishlist"
+    ],
+    "authors": [
+        {
+            "name": "Sherlockode",
+            "email": "contact@sherlockode.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Sherlockode\\Sylius\\WishlistBundle\\": "" }
+    },
+    "require": {
+        "sylius/core": "^1.1"
+    }
+}

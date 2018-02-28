@@ -1,0 +1,82 @@
+services:
+    sherlockode_wishlist.listener.menu_builder:
+        class: '%sherlockode_wishlist.listener.menu_builder.class%'
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addBackendMenuItems }
+
+    sherlockode_wishlist.listener.menu_builder_account:
+        class: '%sherlockode_wishlist.listener.menu_builder_account.class%'
+        arguments:
+            - '@translator'
+            - '@security.token_storage'
+            - '@sherlockode_wishlist.repository.wishlist'
+            - '%sherlockode_sylius_wishlist.multiple%'
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.shop.account, method: addAccountMenuItems }
+
+    sherlockode_wishlist.listener.user:
+        class: '%sherlockode_wishlist.listener.user.class%'
+        arguments: ['@service_container']
+        tags:
+            - { name: 'doctrine.event_listener', event: 'onFlush' }
+            - { name: 'doctrine.event_listener', event: 'postFlush' }
+
+    sherlockode_wishlist.factory.plain.wishlist:
+        class: '%sherlockode_wishlist.factory.plain.wishlist.class%'
+        arguments:
+            - '%sherlockode_wishlist.model.wishlist.class%'
+
+    sherlockode_wishlist.factory.wishlist:
+        class: '%sherlockode_wishlist.factory.wishlist.class%'
+        arguments:
+            - '@sherlockode_wishlist.factory.plain.wishlist'
+            - '@translator'
+            - '%sherlockode_sylius_wishlist.default_public%'
+
+    sherlockode_wishlist.controller.front.wishlist:
+        class: '%sherlockode_wishlist.controller.front.wishlist.class%'
+        arguments: ['@service_container']
+
+    sherlockode_wishlist.controller.account.wishlist:
+        class: '%sherlockode_wishlist.controller.account.wishlist.class%'
+        arguments: ['@service_container']
+
+    sherlockode_wishlist.controller.front.wishlist_item:
+        class: '%sherlockode_wishlist.controller.front.wishlist_item.class%'
+        arguments: ['@service_container']
+
+    sherlockode_wishlist.provider.wishlist:
+        class: '%sherlockode_wishlist.provider.wishlist.class%'
+        arguments:
+            - '@sherlockode_wishlist.repository.wishlist'
+            - '@security.token_storage'
+
+    sherlockode_wishlist.form.type.admin_wishlist:
+        class: '%sherlockode_wishlist.form.type.admin_wishlist.class%'
+        arguments:
+            - '%sherlockode_wishlist.model.wishlist.class%'
+        tags:
+            - { name: form.type, alias: sherlockode_admin_wishlist }
+
+    sherlockode_wishlist.form.type.wishlist:
+        class: '%sherlockode_wishlist.form.type.wishlist.class%'
+        arguments:
+            - '%sherlockode_wishlist.model.wishlist.class%'
+        tags:
+            - { name: form.type, alias: sherlockode_wishlist }
+
+    sherlockode_wishlist.form.type.user_choice:
+        class: '%sherlockode_wishlist.form.type.user_choice.class%'
+        arguments:
+            - '@sylius.repository.shop_user'
+        tags:
+            - { name: form.type, alias: sherlockode_wishlist_user_choice }
+
+    sherlockode_wishlist.resolver.product_variant_cart:
+        class: '%sherlockode_wishlist.resolver.product_variant_cart.class%'
+        arguments:
+            - '@sylius.repository.product'
+            - '@sylius.factory.add_to_cart_command'
+            - '@sylius.context.cart'
+            - '@sylius.factory.cart_item'
+            - '@form.factory'

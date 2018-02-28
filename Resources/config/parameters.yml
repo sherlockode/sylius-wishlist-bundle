@@ -1,0 +1,36 @@
+parameters:
+    # Models
+    sherlockode_wishlist.model.wishlist.class: Sherlockode\Sylius\WishlistBundle\Model\Wishlist
+    sherlockode_wishlist.model.wishlist_item.class: Sherlockode\Sylius\WishlistBundle\Model\WishlistItem
+
+    # Front controllers
+    sherlockode_wishlist.controller.front.wishlist.class: Sherlockode\Sylius\WishlistBundle\Controller\Frontend\WishlistController
+    sherlockode_wishlist.controller.front.wishlist_item.class: Sherlockode\Sylius\WishlistBundle\Controller\Frontend\WishlistItemController
+
+    # Account controllers
+    sherlockode_wishlist.controller.account.wishlist.class: Sherlockode\Sylius\WishlistBundle\Controller\Account\WishlistController
+
+    # Repositories
+    sherlockode_wishlist.repository.wishlist.class: Sherlockode\Sylius\WishlistBundle\Doctrine\ORM\WishlistRepository
+
+    # Plain factories
+    sherlockode_wishlist.factory.plain.wishlist.class: Sylius\Component\Resource\Factory\Factory
+
+    # Decorated factories
+    sherlockode_wishlist.factory.wishlist.class: Sherlockode\Sylius\WishlistBundle\Factory\WishlistFactory
+
+    # Listeners
+    sherlockode_wishlist.listener.user.class: Sherlockode\Sylius\WishlistBundle\EventListener\UserListener
+    sherlockode_wishlist.listener.menu_builder.class: Sherlockode\Sylius\WishlistBundle\EventListener\MenuBuilderListener
+    sherlockode_wishlist.listener.menu_builder_account.class: Sherlockode\Sylius\WishlistBundle\EventListener\AccountMenuBuilderListener
+
+    # Form Types
+    sherlockode_wishlist.form.type.wishlist.class: Sherlockode\Sylius\WishlistBundle\Form\Type\WishlistType
+    sherlockode_wishlist.form.type.admin_wishlist.class: Sherlockode\Sylius\WishlistBundle\Form\Type\AdminWishlistType
+    sherlockode_wishlist.form.type.user_choice.class: Sherlockode\Sylius\WishlistBundle\Form\Type\UserChoiceType
+
+    # Providers
+    sherlockode_wishlist.provider.wishlist.class: Sherlockode\Sylius\WishlistBundle\Provider\WishlistProvider
+
+    # Resolvers
+    sherlockode_wishlist.resolver.product_variant_cart.class: Sherlockode\Sylius\WishlistBundle\Resolver\ProductVariantCartResolver

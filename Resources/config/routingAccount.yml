@@ -1,0 +1,33 @@
+# ------------------------------------------------------------------------------
+#  ACCOUNT
+# ------------------------------------------------------------------------------
+
+sherlockode_account_wishlist_create:
+    path: /new
+    methods: [GET, POST]
+    defaults:
+        _controller: sherlockode_wishlist.controller.account.wishlist:createAction
+
+sherlockode_account_wishlist_edit:
+    path: /{id}/edit
+    methods: [GET]
+    defaults:
+        _controller: sherlockode_wishlist.controller.account.wishlist:updateAction
+
+sherlockode_account_wishlist_update:
+    path: /{id}
+    methods: [PUT, POST]
+    defaults:
+        _controller: sherlockode_wishlist.controller.account.wishlist:updateAction
+
+sherlockode_account_wishlist_index:
+    path: /
+    methods: [GET]
+    defaults:
+        _controller: sherlockode_wishlist.controller.account.wishlist:indexAction
+
+sherlockode_account_wishlist_delete:
+    path: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: sherlockode_wishlist.controller.account.wishlist:deleteAction

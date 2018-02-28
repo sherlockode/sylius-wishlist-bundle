@@ -1,0 +1,42 @@
+imports:
+    - { resource: "parameters.yml" }
+    - { resource: "services.yml" }
+    - { resource: "grids.yml" }
+
+sylius_resource:
+    resources:
+        sherlockode_wishlist.wishlist:
+            classes:
+                repository: '%sherlockode_wishlist.repository.wishlist.class%'
+                factory: '%sherlockode_wishlist.factory.wishlist.class%'
+                model: '%sherlockode_wishlist.model.wishlist.class%'
+                form: '%sherlockode_wishlist.form.type.admin_wishlist.class%'
+
+        sherlockode_wishlist.wishlist_item:
+            classes:
+                model: '%sherlockode_wishlist.model.wishlist_item.class%'
+
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    sherlockodeSyliusWishlistBundle:
+                        type: xml
+                        prefix: Sherlockode\Sylius\WishlistBundle\Model
+                        dir: 'Resources/config/doctrine'
+                        is_bundle: true
+                        mapping: true
+
+        resolve_target_entities:
+            Sylius\Component\Core\Model\ShopUserInterface: '%sylius.model.shop_user.class%'
+            sherlockode\Sylius\WishlistBundle\Model\WishlistInterface: '%sherlockode_wishlist.model.wishlist.class%'
+            sherlockode\Sylius\WishlistBundle\Model\WishlistItemInterface: '%sherlockode_wishlist.model.wishlist_item.class%'
+
+twig:
+    globals:
+        wishlist_provider: '@sherlockode_wishlist.provider.wishlist'
+
+sherlockode_sylius_wishlist:
+    multiple: false
+    default_public: false

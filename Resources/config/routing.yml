@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------------------
+#  BACKEND
+# ------------------------------------------------------------------------------
+
+sherlockode_wishlist:
+    resource: |
+        alias: sherlockode_wishlist.wishlist
+        templates: SyliusAdminBundle:Crud
+        except: ['show']
+        redirect: update
+        grid: sherlockode_wishlist_admin
+        section: admin
+        vars:
+            all:
+                header: sherlockode_wishlist.ui.wishlists
+                subheader: sherlockode_wishlist.ui.manage_wishlists
+                templates:
+                    form: SherlockodeSyliusWishlistBundle:Backend:_form.html.twig
+    type: sylius.resource
+    prefix: /admin
