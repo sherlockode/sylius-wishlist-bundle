@@ -18,7 +18,7 @@ sylius_grid:
                     sortable: title
                     path: .
                     options:
-                        template: "sherlockodeSyliusWishlistBundle:Backend:grid/_title.html.twig"
+                        template: "SherlockodeSyliusWishlistBundle:Backend:grid/_title.html.twig"
                 public:
                     type: twig
                     label: sherlockode_wishlist.wishlist.label.public
@@ -31,7 +31,7 @@ sylius_grid:
                     sortable: user
                     path: .
                     options:
-                        template: "sherlockodeSyliusWishlistBundle:Backend:grid/_user.html.twig"
+                        template: "SherlockodeSyliusWishlistBundle:Backend:grid/_user.html.twig"
                 createdAt:
                     type: datetime
                     label: sherlockode_wishlist.wishlist.label.created_at

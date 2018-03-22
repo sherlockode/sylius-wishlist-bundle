@@ -16,7 +16,7 @@
         {% for item in wishlist.items %}
             <tr>
                 <td class="single line">
-                    {% include '@WebburzaSyliusWishlist/Frontend/Wishlist/_info.html.twig' with {'variant': item.productVariant} %}
+                    {% include '@SherlockodeSyliusWishlist/Frontend/Wishlist/_info.html.twig' with {'variant': item.productVariant} %}
                 </td>
                 <td class="right aligned two wide">
                     {{ money.calculatePrice(item.productVariant) }}

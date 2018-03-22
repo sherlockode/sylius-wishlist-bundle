@@ -7,7 +7,7 @@ use Doctrine\ORM\Event\OnFlushEventArgs;
 use Doctrine\ORM\Event\PostFlushEventArgs;
 use Sylius\Component\Core\Model\ShopUserInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Webburza\Sylius\WishlistBundle\Model\WishlistInterface;
+use Sherlockode\Sylius\WishlistBundle\Model\WishlistInterface;
 
 class UserListener
 {

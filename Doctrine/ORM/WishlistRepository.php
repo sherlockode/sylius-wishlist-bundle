@@ -5,8 +5,8 @@ namespace Sherlockode\Sylius\WishlistBundle\Doctrine\ORM;
 use Doctrine\ORM\QueryBuilder;
 use Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository;
 use Sylius\Component\User\Model\UserInterface;
-use Webburza\Sylius\WishlistBundle\Model\WishlistInterface;
-use Webburza\Sylius\WishlistBundle\Repository\WishlistRepositoryInterface;
+use Sherlockode\Sylius\WishlistBundle\Model\WishlistInterface;
+use Sherlockode\Sylius\WishlistBundle\Repository\WishlistRepositoryInterface;
 
 class WishlistRepository extends EntityRepository implements WishlistRepositoryInterface
 {

@@ -6,8 +6,8 @@ use Sylius\Component\User\Repository\UserRepositoryInterface;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Webburza\Sylius\WishlistBundle\Factory\WishlistFactoryInterface;
-use Webburza\Sylius\WishlistBundle\Repository\WishlistRepositoryInterface;
+use Sherlockode\Sylius\WishlistBundle\Factory\WishlistFactoryInterface;
+use Sherlockode\Sylius\WishlistBundle\Repository\WishlistRepositoryInterface;
 
 class CreateInitialCommand extends ContainerAwareCommand
 {

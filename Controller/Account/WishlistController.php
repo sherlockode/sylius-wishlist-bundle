@@ -9,8 +9,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Webburza\Sylius\WishlistBundle\Form\Type\WishlistType;
-use Webburza\Sylius\WishlistBundle\Model\WishlistInterface;
+use Sherlockode\Sylius\WishlistBundle\Form\Type\WishlistType;
+use Sherlockode\Sylius\WishlistBundle\Model\WishlistInterface;
 
 class WishlistController extends FOSRestController
 {
@@ -45,7 +45,7 @@ class WishlistController extends FOSRestController
             'wishlists' => $wishlists
         ]);
 
-        $view->setTemplate('WebburzaSyliusWishlistBundle:Frontend/Account/Wishlist:index.html.twig');
+        $view->setTemplate('SherlockodeSyliusWishlistBundle:Frontend/Account/Wishlist:index.html.twig');
 
         return $this->handleView($view);
     }
@@ -96,7 +96,7 @@ class WishlistController extends FOSRestController
             'form' => $form->createView()
         ]);
 
-        $view->setTemplate('WebburzaSyliusWishlistBundle:Frontend/Account/Wishlist:create.html.twig');
+        $view->setTemplate('SherlockodeSyliusWishlistBundle:Frontend/Account/Wishlist:create.html.twig');
 
         return $this->handleView($view);
     }
@@ -149,7 +149,7 @@ class WishlistController extends FOSRestController
             'wishlist' => $wishlist
         ]);
 
-        $view->setTemplate('WebburzaSyliusWishlistBundle:Frontend/Account/Wishlist:update.html.twig');
+        $view->setTemplate('SherlockodeSyliusWishlistBundle:Frontend/Account/Wishlist:update.html.twig');
 
         return $this->handleView($view);
     }

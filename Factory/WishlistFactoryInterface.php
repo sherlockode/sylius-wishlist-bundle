@@ -4,7 +4,7 @@ namespace Sherlockode\Sylius\WishlistBundle\Factory;
 
 use Sylius\Component\Resource\Factory\FactoryInterface;
 use Sylius\Component\User\Model\UserInterface;
-use Webburza\Sylius\WishlistBundle\Model\WishlistInterface;
+use Sherlockode\Sylius\WishlistBundle\Model\WishlistInterface;
 
 interface WishlistFactoryInterface extends FactoryInterface
 {

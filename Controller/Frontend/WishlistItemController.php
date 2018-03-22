@@ -13,8 +13,8 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Webburza\Sylius\WishlistBundle\Model\WishlistInterface;
-use Webburza\Sylius\WishlistBundle\Model\WishlistItemInterface;
+use Sherlockode\Sylius\WishlistBundle\Model\WishlistInterface;
+use Sherlockode\Sylius\WishlistBundle\Model\WishlistItemInterface;
 
 class WishlistItemController extends FOSRestController
 {
@@ -66,7 +66,7 @@ class WishlistItemController extends FOSRestController
             'form'    => $form->createView()
         ]);
 
-        $view->setTemplate('@WebburzaSyliusWishlist/Frontend/Wishlist/_cartForm.html.twig');
+        $view->setTemplate('@SherlockodeSyliusWishlist/Frontend/Wishlist/_cartForm.html.twig');
 
         return $this->handleView($view);
     }

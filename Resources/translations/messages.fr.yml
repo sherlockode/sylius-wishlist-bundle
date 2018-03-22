@@ -1,0 +1,46 @@
+sherlockode_wishlist:
+    ui:
+        wishlist: Wishlist
+        wishlists: Wishlists
+        wishlist_items: Wishlist items
+        manage_wishlists: Gérer les wishlists
+        wishlist_is_empty: Cette wishlist est vide.
+        not_public: Cette wishlist est privé.
+        clear_wishlist: Effacer le contenu de la wishlist
+        customer: Client
+        add_to_cart: Ajouter au panier
+        add_to_wishlist: Ajouter à la wishlist
+        remove_from_wishlist: Effacer
+        controls: Controls
+        my_wishlist: Wishlist
+        my_wishlists: Mes wishlists
+        deleted: La wishlist a été effacé avec succès.
+
+    account:
+        update:
+            header: Editer la wishlist
+            subheader: Update wishlist details
+        create:
+            header: Créer une wishlist
+            subheader: Créer une nouvelle wishlist
+        index:
+            header: Wishlists
+            subheader: Gérer vos wishlists
+
+    flash:
+        already_on_wishlist: Produit ajouté à la wishlist
+        cleared: Items cleared successfully.
+        updated: Wishlist mise à jour.
+        item_added: Produit ajouté à la wishlist
+        item_removed: Produit effacé de la wishlist
+
+    wishlist:
+        default_title: Wishlist
+        label:
+            id: Id
+            title: Titre
+            description: Description
+            public: Publique ?
+            created_at: Créée le
+            updated_at: Mise à jour le
+            user: Utilisateur

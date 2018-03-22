@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Webburza\Sylius\WishlistBundle\Model\WishlistInterface;
+use Sherlockode\Sylius\WishlistBundle\Model\WishlistInterface;
 
 class WishlistController extends FOSRestController
 {
@@ -46,7 +46,7 @@ class WishlistController extends FOSRestController
         $view = View::create($wishlist);
 
         if ($request->getRequestFormat() == 'html') {
-            $view->setTemplate('WebburzaSyliusWishlistBundle:Frontend/Wishlist:show.html.twig');
+            $view->setTemplate('SherlockodeSyliusWishlistBundle:Frontend/Wishlist:show.html.twig');
 
             $view->setData([
                 'wishlist' => $wishlist
@@ -98,7 +98,7 @@ class WishlistController extends FOSRestController
         ]);
 
         // Set view template
-        $view->setTemplate('WebburzaSyliusWishlistBundle:Frontend/Wishlist:show.html.twig');
+        $view->setTemplate('SherlockodeSyliusWishlistBundle:Frontend/Wishlist:show.html.twig');
 
         // Handle the view
         return $this->handleView($view);

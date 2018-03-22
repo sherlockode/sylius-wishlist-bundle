@@ -16,7 +16,7 @@ class AdminWishlistType extends WishlistType
         parent::buildForm($builder, $options);
 
         $builder->add('user', UserChoiceType::class, [
-            'label'       => 'webburza_wishlist.wishlist.label.user',
+            'label'       => 'sherlockode_wishlist.wishlist.label.user',
             'required'    => true,
             'constraints' => [
                 new NotBlank()

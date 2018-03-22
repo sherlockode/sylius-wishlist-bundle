@@ -21,7 +21,7 @@ doctrine:
         entity_managers:
             default:
                 mappings:
-                    sherlockodeSyliusWishlistBundle:
+                    SherlockodeSyliusWishlistBundle:
                         type: xml
                         prefix: Sherlockode\Sylius\WishlistBundle\Model
                         dir: 'Resources/config/doctrine'

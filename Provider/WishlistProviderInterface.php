@@ -2,7 +2,7 @@
 
 namespace Sherlockode\Sylius\WishlistBundle\Provider;
 
-use Webburza\Sylius\WishlistBundle\Model\WishlistInterface;
+use Sherlockode\Sylius\WishlistBundle\Model\WishlistInterface;
 
 interface WishlistProviderInterface
 {

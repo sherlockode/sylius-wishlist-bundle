@@ -6,7 +6,7 @@ use Sylius\Bundle\UiBundle\Menu\Event\MenuBuilderEvent;
 use Sylius\Component\User\Model\UserInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Translation\TranslatorInterface;
-use Webburza\Sylius\WishlistBundle\Repository\WishlistRepositoryInterface;
+use Sherlockode\Sylius\WishlistBundle\Repository\WishlistRepositoryInterface;
 
 class AccountMenuBuilderListener
 {

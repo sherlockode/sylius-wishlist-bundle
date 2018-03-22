@@ -7,11 +7,11 @@
 {% block title %}{{ parent() }} | {{ header }}{% endblock %}
 
 {% block content %}
-    {% include '@WebburzaSyliusWishlist/Frontend/Wishlist/_header.html.twig' %}
+    {% include '@SherlockodeSyliusWishlist/Frontend/Wishlist/_header.html.twig' %}
     {% if wishlist.items | length %}
         <div class="ui stackable grid">
             <div class="column">
-                {% include '@WebburzaSyliusWishlist/Frontend/Wishlist/_items.html.twig' %}
+                {% include '@SherlockodeSyliusWishlist/Frontend/Wishlist/_items.html.twig' %}
             </div>
         </div>
     {% else %}

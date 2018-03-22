@@ -18,6 +18,7 @@
         "psr-4": { "Sherlockode\\Sylius\\WishlistBundle\\": "" }
     },
     "require": {
-        "sylius/core": "^1.1"
+        "php": "^7.1",
+        "sylius/core": "^1.0"
     }
 }

@@ -4,8 +4,8 @@ namespace Sherlockode\Sylius\WishlistBundle\Provider;
 
 use Sylius\Component\User\Model\UserInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
-use Webburza\Sylius\WishlistBundle\Model\WishlistInterface;
-use Webburza\Sylius\WishlistBundle\Repository\WishlistRepositoryInterface;
+use Sherlockode\Sylius\WishlistBundle\Model\WishlistInterface;
+use Sherlockode\Sylius\WishlistBundle\Repository\WishlistRepositoryInterface;
 
 class WishlistProvider implements WishlistProviderInterface
 {
