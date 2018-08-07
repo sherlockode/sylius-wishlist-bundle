@@ -5,37 +5,37 @@
 # Show the first wishlist for the current user, only if the bundle
 # is configured for a single wishlist per user, otherwise redirect
 sherlockode_frontend_wishlist_first:
-    path: /
+    path: /{_locale}/
     methods: [GET]
     defaults:
         _controller: sherlockode_wishlist.controller.front.wishlist:firstAction
 
 sherlockode_frontend_wishlist_show:
-    path: /{slug}/
+    path: /{_locale}/{slug}/
     methods: [GET]
     defaults:
         _controller: sherlockode_wishlist.controller.front.wishlist:showAction
 
 sherlockode_frontend_wishlist_clear:
-    path: /{id}/clear/
+    path: /{_locale}/{id}/clear/
     methods: [POST]
     defaults:
         _controller: sherlockode_wishlist.controller.front.wishlist:clearAction
 
 sherlockode_frontend_wishlist_add_item:
-    path: /item/
+    path: /{_locale}/item/
     methods: [POST]
     defaults:
         _controller: sherlockode_wishlist.controller.front.wishlist_item:addAction
 
 sherlockode_frontend_wishlist_remove_item:
-    path: /item/{id}/
+    path: /{_locale}/item/{id}/
     methods: [DELETE]
     defaults:
         _controller: sherlockode_wishlist.controller.front.wishlist_item:removeAction
 
 sherlockode_frontend_wishlist_partial_cart_add_item:
-    path: /item/add-to-cart/
+    path: /{_locale}/item/add-to-cart/
     methods: [GET]
     defaults:
         _controller: sherlockode_wishlist.controller.front.wishlist_item:addToCartAction
